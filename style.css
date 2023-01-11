@@ -1,0 +1,80 @@
+/* CSS */
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+body {
+  background-image: url("./bg.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 0.3em;
+}
+.items {
+  border-radius: 5px;
+  margin: 1em;
+  padding: 1em 0.8em;
+  color: #8f8f8f;
+  background-color: #1e293b;
+  border-radius: 10px;
+  position: relative;
+}
+
+.items:before {
+  content: "";
+  z-index: -12;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-45deg, #f8acff 0%, #696eff 100%);
+  transform: translate3d(10px, 20px, 0) scale(0.9);
+  filter: blur(15px);
+  opacity: var(0.3);
+  transition: opacity 0.8s;
+  border-radius: inherit;
+}
+
+.items h3 {
+  font-size: 1.2em;
+  font-family: "Inter var experimental", sans-serif;
+  color: rgb(209, 209, 209);
+  font-weight: bold;
+}
+.items p {
+  font-family: "Source Code Pro", monospace;
+  font-size: 15px;
+}
+.items img {
+  width: 100%;
+  border-radius: 5px;
+}
+.box {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.items button {
+  width: 120px;
+  padding: 0.5em;
+  border: none;
+  font-size: 14px;
+  border-radius: 50px;
+  background: white;
+  color: #1e293b;
+  font-family: "Inter var experimental", sans-serif;
+  font-weight: bold;
+}
