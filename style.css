@@ -7,6 +7,12 @@
     font-family: "Inter var", sans-serif;
   }
 }
+h1 {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  font-family: "Inter var", sans-serif;
+}
 
 body {
   background-image: url("./bg.jpg");
